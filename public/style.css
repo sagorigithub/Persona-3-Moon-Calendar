@@ -1,0 +1,167 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.blue {
+  background-color: rgb(0, 155, 255);
+}
+
+.rectangle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.rectangle {
+  width: 100%; 
+  height: 85%; 
+  background-color: #3c3c3c;
+}
+
+.phase-info {
+  position: fixed;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.dufm-info {
+  position: fixed;
+  top: 74%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.green {
+  background-color: #5ec075;
+}
+
+.phase-image {
+  position: fixed;
+  top: 66%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.note {
+  position: fixed;
+  top: 96%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: yellow;
+}
+
+.note2 {
+  position: fixed;
+  top: 96%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.year {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.month-num {
+  position: fixed;
+  top: 29%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-size: 6em;
+}
+
+.month-name {
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.date {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.day {
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.button {
+  position: fixed;
+  top: 83%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #3c3c3c;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .phase-info, .dufm-info, .phase-image, .note, .note2, .year, .month-num, .month-name, .date, .day {
+    font-size: 12px;
+  }
+
+  .note {
+    top: 90%;
+  }
+
+  .note2 {
+    top: 90%;
+    color: yellow;
+  }
+
+  .year {
+    top: 25%;
+    font-size: 1.2em;
+  }
+
+  .month-num {
+    top: 32%;
+    font-size: 2em;
+  }
+
+  .month-name {
+    top: 44%;
+    font-size: 1.4em;
+  }
+
+  .date {
+    top: 50%;
+    font-size: 1.6em;
+  }
+
+  .day {
+    top: 55%;
+    font-size: 1.2em;
+  }
+}
