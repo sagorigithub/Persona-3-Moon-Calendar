@@ -2,7 +2,7 @@ fetch('/api/variables')
   .then(response => response.json())
   .then(data => {
     document.getElementById('moon-phase').textContent = data.phase;
-    document.getElementById('DUFM').textContent = `Days until next full moon: ${data.daysUntilFullMoon}`;
+    document.getElementById('DUFM').textContent = `Days until full moon: ${data.daysUntilFullMoon}`;
 
     const phaseImages = {
       New: 'Assets/Moons/New Moon.webp',
