@@ -3,19 +3,7 @@ fetch('/api/variables')
   .then(data => {
     document.getElementById('moon-phase').textContent = data.phase;
     document.getElementById('DUFM').textContent = `Days until full moon: ${data.daysUntilFullMoon}`;
-
-    const phaseImages = {
-      New: 'Assets/Moons/New Moon.webp',
-      'Waxing Crescent': 'Assets/Moons/Waxing Crescent.webp',
-      'First Quarter': 'Assets/Moons/First Quarter.webp',
-      'Waxing Gibbous': 'Assets/Moons/Waxing Gibbous.webp',
-      Full: 'Assets/Moons/Full Moon.webp',
-      'Waning Gibbous': 'Assets/Moons/Waning Gibbous.webp',
-      'Last Quarter': 'Assets/Moons/Last Quarter.webp',
-      'Waning Crescent': 'Assets/Moons/Waning Crescent.webp'
-    };
-
-    document.getElementById('image').src = phaseImages[data.phase];
+    document.getElementById('image').src = `Assets/Moons/${data.phase}.webp`;
 
     const date = new Date();
     const year = date.getFullYear(), month = date.getMonth(), dayOfMonth = date.getDate(), dayOfWeek = date.getDay();
@@ -53,10 +41,10 @@ memoriesOfYou.volume = 0.3;
 let masterOfShadow = new Audio('Assets/Master of Shadow.mp3');
 masterOfShadow.volume = 0.4;
 
-memories.addEventListener('click', function() {
+memories.addEventListener('click', () => {
   memoriesOfYou.play();
 });
 
-master.addEventListener('click', function() {
+master.addEventListener('click', () => {
   masterOfShadow.play();
 });
