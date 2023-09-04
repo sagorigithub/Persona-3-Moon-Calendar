@@ -48,3 +48,12 @@ memories.addEventListener('click', () => {
 master.addEventListener('click', () => {
   masterOfShadow.play();
 });
+
+//also delete this once persona 3 reload drops
+const today = new Date();
+today.setHours(0,0,0,0);  // sets the time to midnight
+const nextDate = new Date('2024-02-02');
+const diffTime = nextDate - today;  
+const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));  // convert to days
+document.getElementById('p3re').textContent = `Days until Persona 3 Reload releases: ${diffDays}`;
+
