@@ -38,6 +38,6 @@ app.listen(port, () => {
   console.log(`Up and running on port ${port}`);
 });
 
-var date = new Date();
-var day = date.getDate(); hour = date.getHours(); minute = date.getMinutes();
+let date = new Date();
+let day = date.getDate(); hour = date.getHours(); minute = date.getMinutes();
 console.log(`Day: ${day}, Hour: ${hour}, Minute: ${minute}`);

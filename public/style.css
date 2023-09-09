@@ -134,7 +134,7 @@ body, html {
   background-color: #3c3c3c;
   color: white;
 }
-
+/* Don't forget to remove p3re from this list too  */
 @media (max-width: 600px) {
   .phase-info, .dufm-info, .phase-image, .note, .note2, .year, .month-num, .month-name, .date, .day, .p3re {
     font-size: 12px;
@@ -172,10 +172,10 @@ body, html {
   .day {
     top: 55%;
     font-size: 1.2em;
+  }
 /* Delete this when p3re drops  */
   .p3re {
     top: 10%
     font-size: 1.2em;
-  }
   }
 }
