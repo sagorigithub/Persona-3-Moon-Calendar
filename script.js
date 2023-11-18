@@ -1,6 +1,7 @@
-const test = new Date();
+const today = new Date();
+today.setHours(0,0,0,0); 
 const reference = new Date("1900-01-01");
-const phase = ((test.getTime()-reference.getTime())/86400000)%29.53058770576;
+const phase = ((today.getTime()-reference.getTime())/86400000)%29.53058770576;
 const agePercent = lunarAgePercent();
 let moonPhase = getPhase(), fullCount = daysUntilNextFullMoon();
 
@@ -45,17 +46,15 @@ master.addEventListener('click', () => {
   masterOfShadow.play();
 });
 
-const today = new Date();
-today.setHours(0,0,0,0);  // sets the time to midnight
 const nextDate = new Date('2024-02-02');
 const diffTime = nextDate - today;  
 const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));  // convert to days
 
-if (diffDays > 0){
+if (diffDays > 0) {
   document.getElementById('p3re').textContent = `Days until Persona 3 Reload releases: ${diffDays}`;
 }
-else{
-  document.getElementById('p3re').textContent = "Persona 3 Reload is out!!!!"
+else {
+  document.getElementById('p3re').textContent = "Persona 3 Reload is out!!!"
 }
 
 function getPhase() {
@@ -77,10 +76,13 @@ return phase/29.53058770576;
 function daysUntilNextFullMoon() {
     let daysUntilFullMoon;
     if (agePercent < 0.5) {
-      daysUntilFullMoon = Math.ceil((0.5 - agePercent) * 29.53058770576);
+      daysUntilFullMoon = Math.round((0.5 - agePercent) * 29.53058770576);
     }
     else {
-      daysUntilFullMoon = Math.ceil((1 - agePercent + 0.5) * 29.53058770576);
+      daysUntilFullMoon = Math.round((1 - agePercent + 0.5) * 29.53058770576);
+    }
+    if (moonPhase == "Full") {
+      daysUntilFullMoon = 0;
     }
     return daysUntilFullMoon;
 }
