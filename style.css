@@ -54,23 +54,6 @@ body, html {
   text-align: center;
 }
 
-.note {
-  position: fixed;
-  top: 96%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: yellow;
-}
-
-.note2 {
-  position: fixed;
-  top: 96%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
 .year {
   position: fixed;
   top: 30%;
@@ -116,7 +99,7 @@ body, html {
   text-align: center;
   color: white;
 }
-/* Delete this when p3re drops */
+
 .p3re {
   position: fixed;
   top: 20%;
@@ -134,19 +117,10 @@ body, html {
   background-color: #3c3c3c;
   color: white;
 }
-/* Don't forget to remove p3re from this list too  */
+
 @media (max-width: 600px) {
-  .phase-info, .dufm-info, .phase-image, .note, .note2, .year, .month-num, .month-name, .date, .day, .p3re {
+  .phase-info, .dufm-info, .phase-image, .year, .month-num, .month-name, .date, .day, .p3re {
     font-size: 12px;
-  }
-
-  .note {
-    top: 90%;
-  }
-
-  .note2 {
-    top: 90%;
-    color: yellow;
   }
 
   .year {
@@ -173,9 +147,9 @@ body, html {
     top: 55%;
     font-size: 1.2em;
   }
-/* Delete this when p3re drops  */
+
   .p3re {
-    top: 10%
+    top: 10%;
     font-size: 1.2em;
   }
 }
