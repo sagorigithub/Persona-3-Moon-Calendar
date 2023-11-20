@@ -54,7 +54,7 @@ if (diffDays > 0) {
   document.getElementById('p3re').textContent = `Days until Persona 3 Reload releases: ${diffDays}`;
 }
 else {
-  document.getElementById('p3re').textContent = "Persona 3 Reload is out!!!"
+  document.getElementById('p3re').textContent = "Persona 3 Reload is out!!!";
 }
 
 function getPhase() {
