@@ -9,8 +9,7 @@ document.getElementById('moon-phase').textContent = moonPhase;
 document.getElementById('DUFM').textContent = `Days until full moon: ${fullCount}`;
 document.getElementById('image').src = `Assets/Moons/${moonPhase}.webp`;
 
-const date = new Date();
-const year = date.getFullYear(), month = date.getMonth(), dayOfMonth = date.getDate(), dayOfWeek = date.getDay();
+const year = today.getFullYear(), month = today.getMonth(), dayOfMonth = today.getDate(), dayOfWeek = today.getDay();
 const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 document.getElementById("year").textContent = year;
