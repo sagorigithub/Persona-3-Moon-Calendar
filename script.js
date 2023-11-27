@@ -17,6 +17,8 @@ document.getElementById("month-num").textContent = month + 1;
 document.getElementById("date").textContent = dayOfMonth;
 document.getElementById("month-name").textContent = monthNames[month];
 document.getElementById("day-name").textContent = dayNames[dayOfWeek];
+let memories = document.getElementById("play-memories");
+let master = document.getElementById("play-master");
 
 if (month == 2 && dayOfMonth == 5 && moonPhase == "Full") {
   document.body.classList.replace("blue", "green");
@@ -30,8 +32,6 @@ if (month == 2 && dayOfMonth == 5 && moonPhase == "Full") {
   master.style.display = 'block';
 }
 
-let memories = document.getElementById("play-memories");
-let master = document.getElementById("play-master");
 let memoriesOfYou = new Audio('Assets/Memories of You.mp3');
 memoriesOfYou.volume = 0.3;
 let masterOfShadow = new Audio('Assets/Master of Shadow.mp3');
