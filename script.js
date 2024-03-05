@@ -74,14 +74,14 @@ return phase/29.53058770576;
 
 function daysUntilNextFullMoon() {
     let daysUntilFullMoon;
-    if (agePercent < 0.5) {
+    if (moonPhase == "Full") {
+      daysUntilFullMoon = 0;
+    }
+    else if (agePercent < 0.5) {
       daysUntilFullMoon = Math.round((0.5 - agePercent) * 29.53058770576);
     }
     else {
       daysUntilFullMoon = Math.round((1 - agePercent + 0.5) * 29.53058770576);
-    }
-    if (moonPhase == "Full") {
-      daysUntilFullMoon = 0;
     }
     return daysUntilFullMoon;
 }
