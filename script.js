@@ -45,15 +45,15 @@ master.addEventListener('click', () => {
   masterOfShadow.play();
 });
 
-const nextDate = new Date('2024-02-02');
+const nextDate = new Date('2024-09-10');
 const diffTime = nextDate - today;  
 const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));  // convert to days
 
 if (diffDays > 0) {
-  document.getElementById('p3re').textContent = `Days until Persona 3 Reload releases: ${diffDays}`;
+  document.getElementById('p3re').textContent = `Days until Episode Aigis releases: ${diffDays}`;
 }
 else {
-  document.getElementById('p3re').textContent = "Persona 3 Reload is out!!!";
+  document.getElementById('p3re').textContent = "Episode Aigis is out!!!";
 }
 
 function getPhase() {
