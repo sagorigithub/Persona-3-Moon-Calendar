@@ -47,7 +47,7 @@ master.addEventListener('click', () => {
 
 const nextDate = new Date('2024-09-10');
 const diffTime = nextDate - today;  
-const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));  // convert to days
+const diffDays = Math.ceil(diffTime / 86400000);  // convert to days
 
 if (diffDays > 0) {
   document.getElementById('p3re').textContent = `Days until Episode Aigis releases: ${diffDays}`;
