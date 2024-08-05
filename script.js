@@ -57,7 +57,7 @@ else {
 }
 
 function getPhase() {
-if (phase < 1.84566173161) {return "New;"}
+if (phase < 1.84566173161) {return "New";}
 if (phase < 5.53698519483) {return "Waxing Crescent";}
 if (phase < 9.22830865805) {return "First Quarter";}
 if (phase < 12.91963212127) {return "Waxing Gibbous";}
